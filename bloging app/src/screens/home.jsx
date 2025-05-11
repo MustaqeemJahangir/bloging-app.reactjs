@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { use } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import { getAuth, onAuthStateChanged ,signOut } from "firebase/auth";
 import { Firestore ,collection,query,where    ,getFirestore ,getDocs  } from "firebase/firestore";
 import { app } from "../config-files/firebase";
@@ -79,6 +79,7 @@ async function getdata() {
                 <img src={userimage} alt=""  width='200px'/>
             ):(<p>loading</p>)}
             {username ? <h1>{username}</h1>:<p>..loading</p>}
+            <Link to="blogs">blogs</Link>
             <button onClick={logout} >log out</button>
             
 

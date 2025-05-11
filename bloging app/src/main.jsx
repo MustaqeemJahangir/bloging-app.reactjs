@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './screens/login.jsx'
 import Home from './screens/home.jsx'
 import Rejister from './screens/rejister.jsx'
+import Blog from './screens/blogs.jsx'
 
 
 
@@ -30,6 +31,11 @@ const router= createBrowserRouter([
       {
         path:"home",
         element:<Home/>,
+      }
+      ,
+      {
+        path:"home/blogs",
+        element:<Blog/>,
       }
   ])
 
