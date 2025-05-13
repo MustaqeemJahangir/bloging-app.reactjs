@@ -5,8 +5,12 @@ import { Link } from "react-router-dom";
 import { getAuth, onAuthStateChanged ,signOut } from "firebase/auth";
 import { Firestore ,collection,query,where    ,getFirestore ,getDocs  } from "firebase/firestore";
 import { app } from "../config-files/firebase";
+import '../index.css'
+
 function Home() {
-const db = getFirestore(app);
+
+
+    const db = getFirestore(app);
     // checked if user is login//
 const [userimage,setImage]= useState('')
 const [username,setName]= useState('')
@@ -69,18 +73,38 @@ async function getdata() {
     
     getdata()
 
+     const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
 
 
     return(
         <div>
-            <h1>home</h1>
+           
+            
+             <nav className="navbar">
+      <div className="navbar-logo"><div className="name">
+        mysite <Link to="blogs" className="link">Blogs</Link></div></div>
 
-            {userimage ?(
-                <img src={userimage} alt=""  width='200px'/>
+      <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+          {userimage ?(
+                <img src={userimage} alt=""  width='40px' height='40px'/>
             ):(<p>loading</p>)}
             {username ? <h1>{username}</h1>:<p>..loading</p>}
-            <Link to="blogs">blogs</Link>
-            <button onClick={logout} >log out</button>
+        
+        {/* <button></button> */}
+        <button onClick={logout} >log out</button>
+
+        
+     
+      </div>
+      <div className="navbar-toggle" onClick={toggleMenu}>
+        ☰
+      </div>
+    </nav>
             
 
         </div>

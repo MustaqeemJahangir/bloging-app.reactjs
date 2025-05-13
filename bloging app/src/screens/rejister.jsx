@@ -16,7 +16,10 @@ function Rejister() {
     let profileImage=" "
 
     //  picture upload //
+
+
 function hanlecloud(){
+  
     window.cloudinary.openUploadWidget(
       {
         cloudName: "dosgchkzy", // yahan apna cloud name daal
