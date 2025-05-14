@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword,getAuth  } from "firebase/auth";
 import { app } from "../config-files/firebase";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import '../index.css'
 
 function Login() {
 
@@ -35,8 +36,9 @@ function Login() {
     }
 
     return(
-          <div>
-            <h1>user login</h1>
+          <div className="main-div">
+           <div>
+             <h1>user login</h1>
             <input type="email"  placeholder="enter a email" ref={email}/>
             <br /><br />
 
@@ -45,7 +47,10 @@ function Login() {
             <br />
             <br />
             <button onClick={loginPage}>submit</button>
-            <Link to="rejister" >rejister</Link>
+            <div>
+              <Link to="rejister" className="long">dont have aacount so please sign up</Link>
+            </div>
+           </div>
 
         </div>
     )

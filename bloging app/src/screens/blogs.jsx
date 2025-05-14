@@ -76,6 +76,9 @@ function hanlecloud(){
               });
               getdata()
               console.log(docRef)
+              head.current.value=""
+              description.current.value=""
+
         
     }
    async function getdata() {
@@ -141,31 +144,41 @@ let post=[]
                     ☰
                   </div>
                 </nav>
-            <div>
+            <div className="post-head">
                <br />
-               <br />
+               {/* <br /> */}
+
+                <div className="post-sub">
+                  <h1>make a post</h1>
 
                 
                 <input type="text" placeholder="enter a heading"  ref={head}/>
                 <br /><br />
 
-                <input type="text" placeholder="enter a discription"  ref={description}/>
+                
+                <textarea placeholder="enter a discription"  ref={description}></textarea>
                 <br /><br />
                 <button onClick={hanlecloud}>upload-pic</button>
                 <br />
                 <br />
 
                 <button onClick={post}>post</button>
-                
+                </div>
 
             </div>
             
-            <div>
+            <div className="body">
                 {allpost ? allpost.map((item,index)=>{
                     return(<div key={index}>
-                        <h1>{item.head}</h1>
-                        <p>{item.description}</p>
-                        <img src={item.image} alt=""  width='300px'/>
+                        <div className="date">
+                          <h1>{item.head}</h1>
+                        <h6>{item.postdate}</h6>
+                        </div>
+
+                       <div>
+                         <p>{item.description}</p>
+                        <img src={item.image} alt=""  />
+                       </div>
 
 
                     </div>)

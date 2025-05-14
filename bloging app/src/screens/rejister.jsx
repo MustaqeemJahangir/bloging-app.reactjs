@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { createUserWithEmailAndPassword ,getAuth} from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { app } from "../config-files/firebase";
+import '../index.css'
+import { Link } from "react-router-dom";
 
 import { getFirestore,addDoc,collection } from "firebase/firestore";
 function Rejister() {
@@ -82,10 +84,10 @@ function hanlecloud(){
     return(
 
 
-        <div>
+       <div className="main-div">
+         <div >
             <h1>User Rejister</h1>
-            <br />
-            <br />
+            
             <input type="text" placeholder="enter a name " ref={fullname} />
             <br />
             <br />
@@ -97,10 +99,14 @@ function hanlecloud(){
             <br />
             <br />
             <button onClick={hanlecloud}> upload a pic</button>
-<br /><br />
+<br />
             <button onClick={userRejister}>submit</button>
+            <div>
+              <Link to="/" className="long">have a account so please login in !</Link>
+            </div>
 
         </div>
+       </div>
     )
 }
 
