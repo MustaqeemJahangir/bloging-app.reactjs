@@ -87,22 +87,47 @@ function hanlecloud(){
        <div className="main-div">
          <div >
             <h1>User Rejister</h1>
-            
-            <input type="text" placeholder="enter a name " ref={fullname} />
+            <input type="text" autocomplete="off" name="text" class="input" placeholder="Username"ref={fullname}></input>
+            {/* <input type="text" placeholder="enter a name " ref={fullname} /> */}
             <br />
             <br />
-            <input type="email"  placeholder="enter a email" ref={email}/>
+            <input type="email" autocomplete="off" name="text" class="input" placeholder="Emial"ref={email}></input>
+
+            {/* <input type="email"  placeholder="enter a email" ref={email}/> */}
             <br /><br />
-
-            <input type="password"  placeholder="enter a password" ref={password}/>
+            {/* <input type="password" autocomplete="off" name="password" class="input" placeholder="Password"ref={password}></input> */}
+<input type="password" name="text" class="osaman" placeholder="Enter your password!" ref={password}></input>
+            {/* <input type="password"  placeholder="enter a password" ref={password}/> */}
 
             <br />
             <br />
-            <button onClick={hanlecloud}> upload a pic</button>
+            <button alt="upload pic" id="bhai" onClick={hanlecloud}>
+  <i>c</i>
+  <i>l</i>
+  <i>i</i>
+  <i>c</i>
+  <i>k</i>
+  <i>-</i>
+  <i>m</i>
+  <i>e</i>
+  {/* <i>c</i> */}
+  {/* <i></i> */}
+</button>
 <br />
-            <button onClick={userRejister}>submit</button>
+            <button alt="process" id="bhai" onClick={userRejister}>
+  <i>c</i>
+  <i>l</i>
+  <i>i</i>
+  <i>c</i>
+  <i>k</i>
+  <i>-</i>
+  <i>m</i>
+  <i>e</i>
+  {/* <i>c</i> */}
+  {/* <i></i> */}
+</button>
             <div>
-              <Link to="/" className="long">have a account so please login in !</Link>
+              <Link to="/" className="long">have  account .please login in !</Link>
             </div>
 
         </div>

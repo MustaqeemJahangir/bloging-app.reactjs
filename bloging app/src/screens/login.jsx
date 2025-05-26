@@ -39,16 +39,35 @@ function Login() {
           <div className="main-div">
            <div>
              <h1>user login</h1>
-            <input type="email"  placeholder="enter a email" ref={email}/>
-            <br /><br />
+    
 
-            <input type="password"  placeholder="enter a password" ref={password}/>
+            {/* <input type="email"  placeholder="enter a email" ref={email}/> */}
+            {/* <br /><br /> */}
+            <input type="email"  name="text" class="input" placeholder="Username"ref={email}></input>
+<br /><br />
+
+            {/* <input type="password"  placeholder="enter a password" ref={password}/> */}
+            {/* <input type="pasword"  name="text"  placeholder="password"ref={password}></input> */}
+<input type="password" name="text" class="osaman" placeholder="Enter your password!" ref={password}></input>
+
+
 
             <br />
             <br />
-            <button onClick={loginPage}>submit</button>
+               <button alt="process" id="bhai" onClick={loginPage}>
+  <i>c</i>
+  <i>l</i>
+  <i>i</i>
+  <i>c</i>
+  <i>k</i>
+  <i>-</i>
+  <i>m</i>
+  <i>e</i>
+  {/* <i>c</i> */}
+  {/* <i></i> */}
+</button>
             <div>
-              <Link to="rejister" className="long">dont have aacount so please sign up</Link>
+              <Link to="rejister" className="long">dont have aacount .please signIn !</Link>
             </div>
            </div>
 
